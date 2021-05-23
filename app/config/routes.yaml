@@ -1,0 +1,7 @@
+home:
+    path: /
+    controller: App\Controller\HomeController::home
+
+coords_calcualor:
+    path: /coords/calculate/{index}/{distance}
+    controller: App\Controller\CoordsCalculatorController::findNearby

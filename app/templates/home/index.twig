@@ -1,0 +1,39 @@
+{% extends "layout.twig" %}
+
+{% block javascripts %}
+    <script type="application/javascript" src="/js/home/index.js"></script>
+{% endblock %}
+
+{% block body %}
+    <form>
+        <div class="row">
+            Settings
+            <div class="row">
+                <div class="col-4">
+                    <label for="place" class="form-label">Place:</label>
+                    <select class="form-select" aria-label="Default select example" id="place" required>
+                        <option selected value="">Choose place</option>
+                        {% for index, place in places %}
+                            <option value="{{ index }}">{{ place }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-sm">
+                    <label for="range" class="form-label">Range (in km):</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control col-sm-2" disabled value="50" id="range-value">
+                        <span class="input-group-text">@</span>
+                        <input type="range" class="form-control form-range col-sm-10"  disabled min="0" max="1000" step="1" id="range" value="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            Results:
+            <div class="row" id="results">
+
+            </div>
+        </div>
+    </form>
+{% endblock %}
