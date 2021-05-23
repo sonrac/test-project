@@ -14,7 +14,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - socket:/var/run/php
-      - ./app:/app
+      - ./app/public:/app/public
     ports:
     - 3334:8080
 
