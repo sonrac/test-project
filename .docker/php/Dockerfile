@@ -14,7 +14,7 @@ RUN addgroup --gid ${gid} ${group} && \
     useradd -u ${uid} -g ${group} -s /bin/bash ${group} && \
     mkdir /var/run/php $COMPOSER_HOME && \
     chown -R ${gid}:${uid} /usr/local /var/run /var/run/php $COMPOSER_HOME && \
-    apt-get update -y && apt-get install -y git && \
+    apt-get update -y && apt-get install -y git zip && \
     rm -rf /var/cache/apt/* /var/lib/dpkg/*
 
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
