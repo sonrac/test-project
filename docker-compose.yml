@@ -16,7 +16,7 @@ services:
       - socket:/var/run/php
       - ./app:/app
     ports:
-    - 3334:80
+    - 3334:8080
 
 volumes:
   socket:
