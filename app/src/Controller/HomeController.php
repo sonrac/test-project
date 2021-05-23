@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use App\Composite\DropDownComposition;
+use App\Composite\PlacesDropDownComposite;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
 class HomeController extends AbstractController
 {
-    public function home(DropDownComposition $dropDownComposition): Response
+    public function home(PlacesDropDownComposite $dropDownComposition): Response
     {
         return $this->render(
             'home/index.twig',

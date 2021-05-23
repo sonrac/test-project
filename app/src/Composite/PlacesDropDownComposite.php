@@ -6,7 +6,7 @@ namespace App\Composite;
 
 use App\Service\DataReader\ReaderInterface;
 
-class DropDownComposition
+class PlacesDropDownComposite
 {
     private ReaderInterface $reader;
 
